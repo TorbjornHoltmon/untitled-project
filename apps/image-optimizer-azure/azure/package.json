@@ -1,0 +1,17 @@
+{
+  "name": "image-optimizer-azure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/functions/*.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^4.2.0",
+    "sharp": "^0.33.2",
+    "zod": "^3.22.4",
+    "zod-validation-error": "^3.0.2"
+  }
+}

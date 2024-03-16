@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "jsx": "react"
+  },
+  "include": ["src/cron.ts", "src/env.d.ts"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,7 @@
+{
+  "extends": ["eslint-config-unjs"],
+  "rules": {
+    "no-empty-pattern": "off",
+    // Turn off whatever unused rules here.
+  },
+}

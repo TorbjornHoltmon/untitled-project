@@ -1,0 +1,17 @@
+{
+  "name": "@untitled-project/common",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "tsc --noEmit -p ./tsconfig.lint.json"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,6 @@
+packages:
+  - packages/**/*
+  - apps/**/*
+  - scripts/**/*
+  - database/**/*
+  - database-integrations/**/*

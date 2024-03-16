@@ -1,0 +1,27 @@
+{
+  "name": "untitled-project",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "eslint": "^8.56.0",
+    "eslint-config-unjs": "^0.2.1",
+    "prettier": "3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "turbo": "^1.12.4",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=19.0.0",
+    "pnpm": ">=8.6.12"
+  },
+  "author": "Torbjørn Holtmon",
+  "license": "MIT",
+  "pnpm": {
+    "ignore-workspace-root-check": true
+  }
+}

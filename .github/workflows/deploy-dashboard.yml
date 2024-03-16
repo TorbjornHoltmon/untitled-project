@@ -1,0 +1,72 @@
+name: Deploy dashboard
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - '.github/workflows/deploy-dashboard.yml'
+      - 'apps/dashboard'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: 'deploy-dashboard'
+  cancel-in-progress: true
+jobs:
+  build-and-deploy:
+    timeout-minutes: 8
+    name: Build and deploy dev web
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get branch name
+        id: branch-name
+        uses: tj-actions/branch-names@v6
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.9.0
+          cache: 'pnpm'
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-install.outputs.dest }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('./pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build dashboard
+        run: pnpm build
+        working-directory: apps/dashboard
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: untitled-project-dashboard
+          workingDirectory: apps/dashboard
+          branch: ${{ steps.branch-name.outputs.current_branch }}
+          directory: .svelte-kit/cloudflare
+          wranglerVersion: 3
+          # Optional: Enable this if you want to have GitHub Deployments triggered
+          # Cannot be used for private repo, change later.
+          # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
