@@ -67,6 +67,7 @@ jobs:
           workingDirectory: apps/web
           branch: ${{ steps.branch-name.outputs.current_branch }}
           directory: dist
+          wranglerVersion: 3
           # Optional: Enable this if you want to have GitHub Deployments triggered
           # Cannot be used for private repo, change later.
           # gitHubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -9,9 +9,6 @@ const config = {
   kit: {
     adapter: adapter({
       fallback: 'spa',
-      routes: {
-        include: ['/404.html', '/favicon.png', '/app/*'],
-      },
     }),
   },
 }

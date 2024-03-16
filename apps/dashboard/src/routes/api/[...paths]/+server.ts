@@ -1,5 +1,5 @@
 import type { RequestEvent } from '@sveltejs/kit'
 
-export function GET({}: RequestEvent) {
+export function fallback({}: RequestEvent) {
   return new Response('hello world!' + new Date().toISOString())
 }
