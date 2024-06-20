@@ -1,12 +1,5 @@
-{
-  "extends": "./tsconfig.base.json",
-  "include": [
-    "packages/*/src/**/*",
-    "database/*/src/**/*",
-    "database-integrations/*/src/**/*",
-    "packages/*/test/**/*",
-    "packages/*/tests/**/*",
-    "packages/image-handling/*/src/**/*",
-    "apps/image-optimizer-azure/src/**/*"
-  ]
-}
+// Yes this file is intentionally empty!
+// ---
+// Having a blank `tsconfig.json` file prevents TypeScript from crawling up your directory tree
+// and possibly picking up a parent `tsconfig.json` (which, unsurprisingly, is very hard to debug)
+{}

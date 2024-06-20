@@ -1,0 +1,20 @@
+{
+  "name": "@untitled-project/r2-image-optimizer-node",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/node-r2-image-handler.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@untitled-project/image-optimizer": "workspace:*",
+    "@untitled-project/cloudflare-r2": "workspace:*",
+    "sort-keys": "^5.0.0"
+  },
+  "devDependencies": {}
+}

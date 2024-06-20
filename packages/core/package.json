@@ -1,0 +1,21 @@
+{
+  "name": "untitled-project",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./context/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "tsc --noEmit -p ./tsconfig.build.json",
+    "dev": "inngest-cli dev"
+  },
+  "dependencies": {
+    "inngest": "^3.14.2"
+  },
+  "devDependencies": {
+    "inngest-cli": "^0.29.1"
+  }
+}

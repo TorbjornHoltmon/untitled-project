@@ -15,6 +15,7 @@
     "emitDeclarationOnly": true,
     "noEmit": false,
     "moduleResolution": "bundler",
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "types": ["@cloudflare/workers-types"]
   }
 }

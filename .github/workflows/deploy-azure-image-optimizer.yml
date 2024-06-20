@@ -4,7 +4,7 @@ name: Image optimizer prod
 # events but only for the master branch
 on:
   push:
-    branches: [main]
+    branches: [do-not-use]
     paths:
       - '.github/workflows/deploy-azure-image-optimizer.yml'
       - 'apps/image-optimizer-azure/**'

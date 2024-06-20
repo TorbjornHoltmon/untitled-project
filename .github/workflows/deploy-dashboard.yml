@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build-and-deploy:
-    environment: dashboard-prod
+    environment: prod
     timeout-minutes: 8
     name: Build and deploy dev web
     runs-on: ubuntu-latest

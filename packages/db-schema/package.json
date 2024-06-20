@@ -1,0 +1,19 @@
+{
+  "name": "@untitled-project/db-schema",
+  "version": "1.0.0",
+  "type": "module",
+  "private": "true",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema-types": "./src/schema-types.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "author": "Torbjørn Holtmon",
+  "license": "MIT",
+  "dependencies": {
+    "drizzle-orm": "^0.31.2",
+    "ulidx": "^2.3.0"
+  }
+}

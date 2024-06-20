@@ -1,0 +1,13 @@
+{
+  "name": "@untitled-project/ci-cd",
+  "version": "1.0.0",
+  "type": "module",
+  "private": "true",
+  "files": [
+    "src"
+  ],
+  "author": "NoA Ignite",
+  "devDependencies": {
+    "@types/bun": "^1.1.0"
+  }
+}
