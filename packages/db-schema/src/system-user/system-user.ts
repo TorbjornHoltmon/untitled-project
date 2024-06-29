@@ -10,7 +10,7 @@ export const systemUser = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => `system_user_${ulid()}`),
     name: text('name').notNull(),
     email: text('email').notNull(),
     roleId: text('role_id').notNull(), // foreign key to role table

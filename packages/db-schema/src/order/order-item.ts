@@ -11,7 +11,7 @@ export const orderItem = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => `order_item_${ulid()}`),
     skuId: text('sku_id')
       .references(() => variant.skuId)
       .notNull(),
@@ -39,4 +39,4 @@ export const orderItemRelations = relations(orderItem, ({ many, one }) => ({
   order: one(order),
 }))
 
-export type OrderItem = typeof orderItem.$inferInsert
+export type OrderItemSqlite = typeof orderItem.$inferInsert

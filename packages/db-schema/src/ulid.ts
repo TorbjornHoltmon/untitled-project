@@ -1,2 +1,2 @@
-import { monotonicFactory, isValid } from 'ulidx'
+import { monotonicFactory } from 'ulidx'
 export const ulid = monotonicFactory()

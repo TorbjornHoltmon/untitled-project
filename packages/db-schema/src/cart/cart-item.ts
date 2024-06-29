@@ -11,7 +11,7 @@ export const cartItem = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => `cart_item_${ulid()}`),
     skuId: text('sku_id')
       .references(() => variant.skuId)
       .notNull(),
@@ -41,4 +41,4 @@ export const cartItemRelations = relations(cartItem, ({ one, many }) => ({
   }),
 }))
 
-export type CartItem = typeof cartItem.$inferInsert
+export type CartItemSqlite = typeof cartItem.$inferInsert

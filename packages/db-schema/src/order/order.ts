@@ -1,4 +1,4 @@
-import { index, sqliteTable, text } from 'drizzle-orm/sqlite-core'
+import { sqliteTable, text } from 'drizzle-orm/sqlite-core'
 import { relations } from 'drizzle-orm'
 import { cart } from '../cart/cart'
 import { ulid } from '../ulid'
@@ -11,11 +11,11 @@ export const order = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => `order_${ulid()}`),
     cartId: text('cart_id')
       .references(() => cart.id)
       .notNull(),
-    itemsAtTimeOfOrder: text('items_at_time_of_order').$type<{ version: string }>(),
+    orderSnapshot: text('order_snapshot').$type<{ version: string }>(),
     createdAt: text('created_at', { mode: 'text' }).default(sqliteISODateNow),
     updatedAt: text('updated_at', { mode: 'text' }).default(sqliteISODateNow),
   },
@@ -27,4 +27,4 @@ export const orderRelations = relations(order, ({ many, one }) => ({
   cart: one(cart),
 }))
 
-export type Order = typeof order.$inferInsert
+export type OrderSqlite = typeof order.$inferInsert

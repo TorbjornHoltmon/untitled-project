@@ -8,7 +8,7 @@ export const campaign = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => 'campaign_' + ulid()),
     name: text('name').notNull(),
     startDate: text('start_date').default(sqliteISODateNow).notNull(),
     endDate: text('end_date').default(sqliteISODateNow).notNull(),

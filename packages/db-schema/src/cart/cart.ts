@@ -10,7 +10,7 @@ export const cart = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => `cart_${ulid()}`),
     active: int('active', { mode: 'boolean' }).$default(() => true),
     createdAt: text('created_at', { mode: 'text' }).default(sqliteISODateNow),
     updatedAt: text('updated_at', { mode: 'text' }).default(sqliteISODateNow),
@@ -25,4 +25,4 @@ export const cartRelations = relations(cart, ({ many }) => ({
   items: many(cartItem),
 }))
 
-export type Cart = typeof cart.$inferInsert
+export type CartSqlite = typeof cart.$inferInsert

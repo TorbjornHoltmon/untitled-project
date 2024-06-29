@@ -24,8 +24,6 @@ export const variant = sqliteTable(
     }),
   },
   (currentTable) => ({
-    // Indexed from unique field
-    // skuIdIndex: index('variant_table_sku_id_idx').on(currentTable.skuId),
     productIdIndex: index('variant_table_product_id_idx').on(currentTable.productId),
     createdAtIndex: index('variant_table_created_at_idx').on(currentTable.createdAt),
     updatedAtIndex: index('variant_table_updated_at_idx').on(currentTable.updatedAt),

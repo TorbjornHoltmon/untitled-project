@@ -11,10 +11,11 @@
     "skipLibCheck": true,
     "allowJs": true,
     "moduleResolution": "Bundler",
+    "noUnusedLocals": true,
     "types": ["node"],
     "declaration": true,
-    "emitDeclarationOnly": true,
     "declarationMap": true,
+    "noEmit": true,
     "resolveJsonModule": true,
     "resolvePackageJsonExports": true
   }

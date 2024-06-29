@@ -6,12 +6,12 @@
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.14.8",
     "prettier": "3.3.2",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "turbo": "^2.0.4",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   },
   "engines": {
     "node": ">=19.0.0",

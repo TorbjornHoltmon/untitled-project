@@ -1,0 +1,14 @@
+{
+  "name": "@untitled-project/playground",
+  "version": "1.0.0",
+  "type": "module",
+  "private": "true",
+  "files": [
+    "src"
+  ],
+  "author": "Torbjørn Holtmon",
+  "scripts": {
+    "dev": "deno run --allow-env --allow-sys main.ts"
+  },
+  "devDependencies": {}
+}

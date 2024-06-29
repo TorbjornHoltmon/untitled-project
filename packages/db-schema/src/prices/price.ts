@@ -10,7 +10,7 @@ export const price = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => 'price_' + ulid()),
     skuId: text('sku_id')
       .references(() => variant.skuId)
       .notNull(),

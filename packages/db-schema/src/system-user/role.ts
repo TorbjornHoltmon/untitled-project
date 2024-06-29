@@ -8,7 +8,7 @@ export const role = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => `role_${ulid()}`),
     name: text('name').notNull(),
     createdAt: text('created_at', { mode: 'text' }).default(sqliteISODateNow),
     updatedAt: text('updated_at', { mode: 'text' }).default(sqliteISODateNow),

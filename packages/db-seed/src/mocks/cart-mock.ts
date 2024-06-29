@@ -23,5 +23,3 @@
 //     this.startDate = startDate ?? subYears(new Date(), 1)
 //   }
 // }
-
-export const a = 1

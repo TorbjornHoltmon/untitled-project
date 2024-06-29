@@ -20,4 +20,4 @@ export const productCategoryRelations = relations(productCategory, ({ one }) => 
   category: one(category),
 }))
 
-export type ProductCategory = typeof category.$inferSelect
+export type ProductCategorySqlite = typeof category.$inferSelect

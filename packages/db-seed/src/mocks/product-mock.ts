@@ -18,6 +18,7 @@ export class ProductMock extends BaseMock {
     this.timeKeeper.incrementDate()
     return {
       id: this.timeKeeper.getUlid(),
+      ean: this.timeKeeper.getUlid(),
       productId,
       skuId: this.timeKeeper.getUlid(),
       title: faker.commerce.productName(),

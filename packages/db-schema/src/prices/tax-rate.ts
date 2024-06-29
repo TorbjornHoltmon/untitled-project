@@ -10,7 +10,7 @@ export const taxRate = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => ulid()),
+      .$defaultFn(() => `tax_rate_${ulid()}`),
     name: text('name').notNull(),
     rate: int('rate').notNull(), // tax rate as a percentage
     productId: text('product_id')
