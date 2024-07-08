@@ -1,5 +1,5 @@
 import { int, sqliteTable, text } from 'drizzle-orm/sqlite-core'
-import { sqliteISODateNow } from '../sqlite-now'
+import { sqliteISODateNow } from '../utils/sqlite-now'
 import { ulid } from '../ulid'
 
 export const campaign = sqliteTable(

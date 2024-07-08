@@ -1,14 +1,11 @@
 import { index, sqliteTable, text } from 'drizzle-orm/sqlite-core'
-import { ulid } from '../ulid'
-import { sqliteISODateNow } from '../sqlite-now'
+import { sqliteISODateNow } from '../utils/sqlite-now'
+import { sqliteUUIDv7 } from '../utils/sqlite-uuid7'
 
 export const role = sqliteTable(
   'role',
   {
-    id: text('id')
-      .primaryKey()
-      .notNull()
-      .$defaultFn(() => `role_${ulid()}`),
+    id: text('id').primaryKey().notNull().default(sqliteUUIDv7('role')),
     name: text('name').notNull(),
     createdAt: text('created_at', { mode: 'text' }).default(sqliteISODateNow),
     updatedAt: text('updated_at', { mode: 'text' }).default(sqliteISODateNow),

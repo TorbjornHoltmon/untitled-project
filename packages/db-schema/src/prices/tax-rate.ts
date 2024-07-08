@@ -1,7 +1,7 @@
 import { relations } from 'drizzle-orm'
 import { index, int, sqliteTable, text } from 'drizzle-orm/sqlite-core'
 import { product } from '../product/product'
-import { sqliteISODateNow } from '../sqlite-now'
+import { sqliteISODateNow } from '../utils/sqlite-now'
 import { ulid } from '../ulid'
 
 export const taxRate = sqliteTable(

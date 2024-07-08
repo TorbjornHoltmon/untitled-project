@@ -13,9 +13,9 @@
     "dev": "inngest-cli dev"
   },
   "dependencies": {
-    "inngest": "^3.19.16"
+    "inngest": "^3.19.21"
   },
   "devDependencies": {
-    "inngest-cli": "^0.29.1"
+    "inngest-cli": "^0.29.3"
   }
 }

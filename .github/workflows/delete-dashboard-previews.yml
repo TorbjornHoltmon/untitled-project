@@ -20,7 +20,7 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8
+          version: 9
           run_install: false
 
       - name: Install Node.js
@@ -28,10 +28,6 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-
-      - name: Write .npmrc file
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
 
       - uses: actions/cache@v3
         name: Setup pnpm cache

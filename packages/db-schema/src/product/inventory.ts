@@ -1,15 +1,12 @@
 import { relations } from 'drizzle-orm'
 import { index, int, sqliteTable, text } from 'drizzle-orm/sqlite-core'
 import { variant } from './variant'
-import { ulid } from '../ulid'
+import { sqliteUUIDv7 } from '../utils/sqlite-uuid7'
 
 export const inventory = sqliteTable(
   'inventory',
   {
-    id: text('id')
-      .primaryKey()
-      .notNull()
-      .$defaultFn(() => `inventory_${ulid()}`),
+    id: text('id').primaryKey().notNull().default(sqliteUUIDv7('role')),
     skuId: text('sku_id')
       .references(() => variant.skuId)
       .notNull(),

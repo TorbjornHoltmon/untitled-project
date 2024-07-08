@@ -2,7 +2,7 @@ import { sqliteTable, text } from 'drizzle-orm/sqlite-core'
 import { relations } from 'drizzle-orm'
 import { cart } from '../cart/cart'
 import { ulid } from '../ulid'
-import { sqliteISODateNow } from '../sqlite-now'
+import { sqliteISODateNow } from '../utils/sqlite-now'
 import { orderItem } from './order-item'
 
 export const order = sqliteTable(

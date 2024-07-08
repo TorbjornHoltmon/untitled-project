@@ -15,7 +15,7 @@
     "@faker-js/faker": "^8.4.1",
     "@untitled-project/db-schema": "workspace:*",
     "date-fns": "^3.6.0",
-    "drizzle-orm": "^0.31.2",
+    "drizzle-orm": "^0.31.4",
     "ulidx": "^2.3.0"
   }
 }

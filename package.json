@@ -6,16 +6,16 @@
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test"
   },
   "devDependencies": {
-    "@types/node": "^20.14.8",
+    "@types/node": "^20.14.10",
     "prettier": "3.3.2",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.6.5",
-    "turbo": "^2.0.4",
-    "typescript": "^5.5.2"
+    "turbo": "^2.0.6",
+    "typescript": "^5.5.3"
   },
   "engines": {
-    "node": ">=19.0.0",
-    "pnpm": ">=8.6.12"
+    "node": ">=20.0.0",
+    "pnpm": ">=9.5.0"
   },
   "author": "Torbjørn Holtmon",
   "license": "MIT",

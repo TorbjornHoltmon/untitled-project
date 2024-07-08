@@ -1,7 +1,7 @@
 import { relations } from 'drizzle-orm'
 import { sqliteTable, text, type AnySQLiteColumn } from 'drizzle-orm/sqlite-core'
 import { ulid } from '../ulid'
-import { sqliteISODateNow } from '../sqlite-now'
+import { sqliteISODateNow } from '../utils/sqlite-now'
 import { productCategory } from './product-category'
 
 export const category = sqliteTable(

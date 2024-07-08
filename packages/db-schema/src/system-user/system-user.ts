@@ -1,16 +1,13 @@
 import { relations } from 'drizzle-orm'
 import { index, sqliteTable, text } from 'drizzle-orm/sqlite-core'
-import { ulid } from '../ulid'
-import { sqliteISODateNow } from '../sqlite-now'
+import { sqliteISODateNow } from '../utils/sqlite-now'
 import { role } from './role'
+import { sqliteUUIDv7 } from '../utils/sqlite-uuid7'
 
 export const systemUser = sqliteTable(
   'system_user',
   {
-    id: text('id')
-      .primaryKey()
-      .notNull()
-      .$defaultFn(() => `system_user_${ulid()}`),
+    id: text('id').primaryKey().notNull().default(sqliteUUIDv7('system-user')),
     name: text('name').notNull(),
     email: text('email').notNull(),
     roleId: text('role_id').notNull(), // foreign key to role table
