@@ -16,7 +16,7 @@
   "author": "Torbjørn Holtmon",
   "license": "MIT",
   "dependencies": {
-    "drizzle-orm": "^0.31.4",
+    "drizzle-orm": "^0.32.1",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
