@@ -1,8 +1,8 @@
 import { relations } from 'drizzle-orm'
 import { sqliteTable, text, type AnySQLiteColumn } from 'drizzle-orm/sqlite-core'
-import { ulid } from '../ulid'
 import { sqliteISODateNow } from '../utils/sqlite-now'
 import { productCategory } from './product-category'
+import { UUIDv7 } from '../utils/uuidv7'
 
 export const category = sqliteTable(
   'category',
@@ -10,7 +10,8 @@ export const category = sqliteTable(
     id: text('id')
       .primaryKey()
       .notNull()
-      .$defaultFn(() => `category_${ulid()}`),
+      // TODO: Replace with UUIDv7 on sqlite side, when support is added.
+      .$defaultFn(() => UUIDv7('category')),
     title: text('title', { length: 256, mode: 'text' }),
     slug: text('slug', { length: 256, mode: 'text' }),
     description: text('description', { mode: 'text' }),

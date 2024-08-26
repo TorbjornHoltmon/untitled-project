@@ -84,3 +84,4 @@ local.settings.json
 packages/database/integrations/db-bun/src/sqlite.db
 .wrangler
 playground/sqlite.sqlite
+apps/demo/src-tauri/gen

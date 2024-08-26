@@ -6,8 +6,8 @@
 
 <main class="h-full bg-white">
   <main class="h-full">
-    <Start />
-    <!-- Hello layout
-    <slot /> -->
+    <!-- <Start /> -->
+    Hello layout
+    <slot />
   </main>
 </main>

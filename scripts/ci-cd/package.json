@@ -8,6 +8,6 @@
   ],
   "author": "Torbjørn Holtmon",
   "devDependencies": {
-    "@types/bun": "^1.1.6"
+    "@types/bun": "^1.1.8"
   }
 }

@@ -1,0 +1,170 @@
+{
+  "id": "C100054",
+  "currencyCode": "NOK",
+  "taxTotal": 3114.25,
+  "subTotal": 15571.25,
+  "discountTotal": 0,
+  "grandTotal": 15571.25,
+  "shippingTotal": 0,
+  "payments": {
+    "remainingPayment": 15571.25,
+    "payments": []
+  },
+  "discounts": [],
+  "items": [
+    {
+      "id": "9068cb09-6786-4fac-be3f-69091f1601b8",
+      "productInfo": {
+        "title": "Stockholm hjulplate, midi, bjørk",
+        "attributes": [],
+        "media": {
+          "url": "https://omnium.blob.core.windows.net/bsproducts/4408/4408.jpg",
+          "type": "image"
+        }
+      },
+      "productId": "4408",
+      "skuId": "4408",
+      "quantity": 1,
+      "taxRate": 25,
+      "currencyCode": "NOK",
+      "originalTotal": 5523.75,
+      "discountTotal": 0,
+      "unitTotal": 5523.75,
+      "lineTotal": 5523.75,
+      "discounts": [],
+      "calculatedValues": {
+        "discount": 0,
+        "tax": 110475,
+        "total": 552375
+      },
+      "components": [],
+      "properties": [],
+      "product": {
+        "id": "4408",
+        "title": "Stockholm hjulplate, midi, bjørk",
+        "slug": "4408",
+        "imageAssets": [
+          {
+            "type": "image",
+            "url": "https://pim.bseurobib.no//ImageImport/44/4408.jpg",
+            "alt": "",
+            "properties": []
+          }
+        ],
+        "priceRange": {
+          "from": {
+            "currencyCode": "NOK",
+            "amount": 4419
+          }
+        },
+        "categories": [
+          {
+            "id": "eurobib-201",
+            "name": "Produkter",
+            "slug": "produkter",
+            "parentId": "fde7fb1c-c388-4b20-8e1f-324ea37be888",
+            "children": [
+              {
+                "id": "eurobib-6",
+                "name": "Utstilling",
+                "slug": "produkter/utstilling",
+                "parentId": "eurobib-201",
+                "children": [
+                  {
+                    "id": "eurobib-39",
+                    "name": "Bøker, gulvstativer",
+                    "slug": "produkter/utstilling/boker--gulvstativer",
+                    "parentId": "eurobib-6",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "inventories": []
+    },
+    {
+      "id": "30ac9364-fd41-4cd1-8db5-298832b87ce3",
+      "productInfo": {
+        "title": "Stockholm hjulplate, midi, sort",
+        "attributes": [],
+        "media": {
+          "url": "https://omnium.blob.core.windows.net/bsproducts/4411/4411.jpg",
+          "type": "image"
+        }
+      },
+      "productId": "4411",
+      "skuId": "4411",
+      "quantity": 2,
+      "taxRate": 25,
+      "currencyCode": "NOK",
+      "originalTotal": 10047.5,
+      "discountTotal": 0,
+      "unitTotal": 5023.75,
+      "lineTotal": 10047.5,
+      "discounts": [],
+      "calculatedValues": {
+        "discount": 0,
+        "tax": 200950,
+        "total": 1004750
+      },
+      "components": [],
+      "properties": [],
+      "product": {
+        "id": "4411",
+        "title": "Stockholm hjulplate, midi, sort",
+        "slug": "4411",
+        "imageAssets": [
+          {
+            "type": "image",
+            "url": "https://pim.bseurobib.no//_default_upload_bucket/4411.jpg",
+            "alt": "",
+            "properties": []
+          },
+          {
+            "type": "image",
+            "url": "https://pim.bseurobib.no//_default_upload_bucket/4411_1.jpg",
+            "alt": "",
+            "properties": []
+          }
+        ],
+        "priceRange": {
+          "from": {
+            "currencyCode": "NOK",
+            "amount": 4019
+          }
+        },
+        "categories": [
+          {
+            "id": "eurobib-201",
+            "name": "Produkter",
+            "slug": "produkter",
+            "parentId": "fde7fb1c-c388-4b20-8e1f-324ea37be888",
+            "children": [
+              {
+                "id": "eurobib-6",
+                "name": "Utstilling",
+                "slug": "produkter/utstilling",
+                "parentId": "eurobib-201",
+                "children": [
+                  {
+                    "id": "eurobib-39",
+                    "name": "Bøker, gulvstativer",
+                    "slug": "produkter/utstilling/boker--gulvstativer",
+                    "parentId": "eurobib-6",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "inventories": []
+    }
+  ],
+  "createdAt": "2024-08-01T13:43:14.4813495Z",
+  "updatedAt": "2024-08-14T08:58:13.1950318Z"
+}
