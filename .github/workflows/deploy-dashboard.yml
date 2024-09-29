@@ -5,7 +5,8 @@ name: Deploy dashboard
 on:
   push:
     branches:
-      - 'main'
+      - 'disabled'
+      # - 'main'
     paths:
       - '.github/workflows/deploy-dashboard.yml'
       - 'apps/dashboard'

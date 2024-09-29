@@ -2,13 +2,16 @@ name: Delete preview on PR close
 
 # only trigger on pull request closed events
 on:
-  pull_request:
-    types: [closed]
+  push:
+    branches:
+      - 'disabled'
+  # pull_request:
+  #   types: [closed]
 
 jobs:
   build-and-deploy:
     timeout-minutes: 8
-    if: ${{ ! contains(github.event.pull_request.title, '#no-preview') }}
+    # if: ${{ ! contains(github.event.pull_request.title, '#no-preview') }}
     environment: dev
     name: Build and deploy preview web
     runs-on: ubuntu-latest

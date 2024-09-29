@@ -1,0 +1,9 @@
+{
+  "name": "@untitled-project/inngest-cli",
+  "devDependencies": {
+    "inngest-cli": "^1.1.0"
+  },
+  "scripts": {
+    "dev": "inngest-cli dev"
+  }
+}

@@ -10,5 +10,7 @@
   "scripts": {
     "dev": "deno run --allow-env --allow-sys main.ts"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@untitled-project/inngest-cli": "workspace:*"
+  }
 }
