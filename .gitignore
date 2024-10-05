@@ -83,5 +83,4 @@ apps/image-optimizer-azure/azure/src
 local.settings.json
 packages/database/integrations/db-bun/src/sqlite.db
 .wrangler
-playground/sqlite.sqlite
-apps/demo/src-tauri/gen
+playground/src/playground.ipynb
