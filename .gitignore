@@ -83,4 +83,3 @@ apps/image-optimizer-azure/azure/src
 local.settings.json
 packages/database/integrations/db-bun/src/sqlite.db
 .wrangler
-playground/src/playground.ipynb
