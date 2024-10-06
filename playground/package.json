@@ -8,7 +8,5 @@
   ],
   "author": "Torbjørn Holtmon",
   "scripts": {},
-  "devDependencies": {
-    "@untitled-project/inngest-cli": "workspace:*"
-  }
+  "devDependencies": {}
 }

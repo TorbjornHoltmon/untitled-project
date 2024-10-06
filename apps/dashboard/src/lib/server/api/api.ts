@@ -1,7 +1,7 @@
-import { Hono } from 'hono'
-import { userApi } from './user'
-import { parseServerEnv } from '$lib/env/server-env'
 import type { ServerEnv } from '$lib/env/server-env'
+import { parseServerEnv } from '$lib/env/server-env'
+import { Hono } from 'hono'
+import { productsApi } from './products-api'
 
 export type HonoApiContext = {
   Variables: {
@@ -24,7 +24,7 @@ export function createApi(options: CreateApiOptions) {
       return next()
     })
     .basePath('/api/untitled-project')
-    .route('/user', userApi)
+    .route('/products', productsApi)
 }
 
 export type ApiRoutes = ReturnType<typeof createApi>
