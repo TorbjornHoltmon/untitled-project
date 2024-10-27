@@ -1,0 +1,31 @@
+{
+  "name": "cli",
+  "author": "",
+  "description": "Stricli command line application",
+  "license": "MIT",
+  "type": "module",
+  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "cli": "dist/bin/cli.js",
+    "__cli_bash_complete": "dist/bin/bash-complete.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "build": "tsc",
+    "postinstall": "cli install"
+  },
+  "dependencies": {
+    "@stricli/core": "^1.0.1",
+    "@stricli/auto-complete": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.1",
+    "typescript": "^5.6.3"
+  }
+}

@@ -127,6 +127,35 @@ importers:
         specifier: ^1.1.12
         version: 1.1.12
 
+  scripts/cli:
+    dependencies:
+      '@stricli/auto-complete':
+        specifier: ^1.0.1
+        version: 1.0.1
+      '@stricli/core':
+        specifier: ^1.0.1
+        version: 1.0.1
+    devDependencies:
+      '@types/node':
+        specifier: ^22.8.1
+        version: 22.8.1
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
+
+  scripts/cli/dist:
+    dependencies:
+      '@stricli/auto-complete':
+        specifier: ^1.0.1
+        version: 1.0.1
+      '@stricli/core':
+        specifier: ^1.0.1
+        version: 1.0.1
+    devDependencies:
+      '@types/node':
+        specifier: ^22.8.1
+        version: 22.8.1
+
   scripts/db-seed:
     dependencies:
       '@faker-js/faker':
@@ -949,6 +978,13 @@ packages:
     resolution: {integrity: sha512-2mLH46K1u3r6uwc95hU+OR9q/ggYMpnS7pSp83Ece1HUQgF9Nh/QwTK5rcgbFnV9j+08yBrU5sA/P0RK2MSBNA==}
     cpu: [x64]
     os: [win32]
+
+  '@stricli/auto-complete@1.0.1':
+    resolution: {integrity: sha512-/I9zWt1Qwi1EKk7bnb477++Ud40kHx0Xoeu0+QDyCZE61TfcueFbh/iiMWx/ip5uh+n/eQnVjl3W7sejOuXwEA==}
+    hasBin: true
+
+  '@stricli/core@1.0.1':
+    resolution: {integrity: sha512-MO7FvetO0CR5lzefY4ydzA7r0e6Cg/G7wTAJGIOb9Dt9OBPjeiQltGI1lMn6yOP1JhwiQYUp5vJVxU/oqRrZhQ==}
 
   '@sveltejs/adapter-cloudflare@4.7.4':
     resolution: {integrity: sha512-hKvWAfCQLzyNBunXEm5T+yyVfbQ+QNqnyqI0+lDoVYNQ58Yg/EPLEQIBS5aNpZgaEuBtY2tnegLsoPS8ZRcaIg==}
@@ -2717,6 +2753,12 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.24.2':
     optional: true
 
+  '@stricli/auto-complete@1.0.1':
+    dependencies:
+      '@stricli/core': 1.0.1
+
+  '@stricli/core@1.0.1': {}
+
   '@sveltejs/adapter-cloudflare@4.7.4(@sveltejs/kit@2.7.3(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.3)(vite@5.4.10(@types/node@22.8.1)))(svelte@5.1.3)(vite@5.4.10(@types/node@22.8.1)))(wrangler@3.83.0(@cloudflare/workers-types@4.20241022.0))':
     dependencies:
       '@cloudflare/workers-types': 4.20241022.0
@@ -2794,7 +2836,7 @@ snapshots:
 
   '@types/ws@8.5.12':
     dependencies:
-      '@types/node': 20.12.14
+      '@types/node': 22.8.1
 
   '@vitest/expect@2.1.3':
     dependencies:
