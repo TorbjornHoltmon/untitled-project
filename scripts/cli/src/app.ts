@@ -1,8 +1,12 @@
 import { buildApplication, buildRouteMap } from '@stricli/core'
 import { buildInstallCommand, buildUninstallCommand } from '@stricli/auto-complete'
-import { name, version, description } from '../package.json'
 import { subdirCommand } from './commands/subdir/command.js'
 import { nestedRoutes } from './commands/nested/commands.js'
+import { readFileSync } from 'node:fs'
+
+const packageJsonPath = new URL('../package.json', import.meta.url)
+
+const { name, description, version } = JSON.parse(readFileSync(packageJsonPath.pathname, 'utf-8'))
 
 const routes = buildRouteMap({
   routes: {

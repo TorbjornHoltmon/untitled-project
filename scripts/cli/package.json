@@ -6,7 +6,10 @@
   "type": "module",
   "version": "0.0.0",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "package.json",
+    "tsconfig.json"
   ],
   "bin": {
     "cli": "dist/bin/cli.js",
