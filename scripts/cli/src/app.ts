@@ -4,9 +4,9 @@ import { subdirCommand } from './commands/subdir/command.js'
 import { nestedRoutes } from './commands/nested/commands.js'
 import { readFileSync } from 'node:fs'
 
-const packageJsonPath = new URL('../package.json', import.meta.url)
+const packageJsonPath = new URL('../package.json', import.meta.url).pathname
 
-const { name, description, version } = JSON.parse(readFileSync(packageJsonPath.pathname, 'utf-8'))
+const { name, description, version } = JSON.parse(readFileSync(packageJsonPath, 'utf-8'))
 
 const routes = buildRouteMap({
   routes: {

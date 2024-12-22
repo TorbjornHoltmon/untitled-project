@@ -4,13 +4,13 @@
   "type": "module",
   "scripts": {},
   "devDependencies": {
-    "@types/node": "^22.8.1",
-    "prettier": "3.3.3",
+    "@types/node": "^22.10.2",
+    "prettier": "3.4.2",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "turbo": "^2.2.3",
-    "typescript": "^5.6.3",
-    "wrangler": "^3.83.0"
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.99.0"
   },
   "engines": {
     "node": ">=22.0.0",
